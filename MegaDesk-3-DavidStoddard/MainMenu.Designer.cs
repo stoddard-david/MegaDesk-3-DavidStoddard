@@ -28,10 +28,13 @@
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
       this.AddQuotesBtn = new System.Windows.Forms.Button();
       this.ViewQuotesBtn = new System.Windows.Forms.Button();
       this.SearchQuotesBtn = new System.Windows.Forms.Button();
       this.ExitBtn = new System.Windows.Forms.Button();
+      this.pictureBox1 = new System.Windows.Forms.PictureBox();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
       // AddQuotesBtn
@@ -90,20 +93,33 @@
       this.ExitBtn.Text = "E&xit";
       this.ExitBtn.UseVisualStyleBackColor = true;
       // 
+      // pictureBox1
+      // 
+      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+      this.pictureBox1.Location = new System.Drawing.Point(242, 155);
+      this.pictureBox1.Name = "pictureBox1";
+      this.pictureBox1.Size = new System.Drawing.Size(130, 112);
+      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+      this.pictureBox1.TabIndex = 4;
+      this.pictureBox1.TabStop = false;
+      // 
       // MainMenu
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(584, 361);
+      this.ClientSize = new System.Drawing.Size(384, 286);
+      this.Controls.Add(this.pictureBox1);
       this.Controls.Add(this.ExitBtn);
       this.Controls.Add(this.SearchQuotesBtn);
       this.Controls.Add(this.ViewQuotesBtn);
       this.Controls.Add(this.AddQuotesBtn);
       this.ForeColor = System.Drawing.Color.MediumSeaGreen;
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "MainMenu";
       this.Text = "MegaDesk";
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -114,6 +130,7 @@
     private System.Windows.Forms.Button ViewQuotesBtn;
     private System.Windows.Forms.Button SearchQuotesBtn;
     private System.Windows.Forms.Button ExitBtn;
+    private System.Windows.Forms.PictureBox pictureBox1;
   }
 }
 
