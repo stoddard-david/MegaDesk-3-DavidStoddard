@@ -16,5 +16,17 @@ namespace MegaDesk_3_DavidStoddard
     {
       InitializeComponent();
     }
+
+    private void AddQuotesBtn_Click(object sender, EventArgs e)
+    {
+      AddQuotes AddQuoteForm = new AddQuotes { Tag = this };
+      AddQuoteForm.Show(this);
+      Hide();
+    }
+
+    private void ExitBtn_Click(object sender, EventArgs e)
+    {
+      Close();
+    }
   }
 }

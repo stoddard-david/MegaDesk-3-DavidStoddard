@@ -43,13 +43,14 @@
       this.AddQuotesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
       this.AddQuotesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.AddQuotesBtn.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.AddQuotesBtn.Location = new System.Drawing.Point(24, 31);
+      this.AddQuotesBtn.Location = new System.Drawing.Point(24, 26);
       this.AddQuotesBtn.Margin = new System.Windows.Forms.Padding(6);
       this.AddQuotesBtn.Name = "AddQuotesBtn";
       this.AddQuotesBtn.Size = new System.Drawing.Size(200, 50);
       this.AddQuotesBtn.TabIndex = 0;
       this.AddQuotesBtn.Text = "&Add New Quote";
       this.AddQuotesBtn.UseVisualStyleBackColor = true;
+      this.AddQuotesBtn.Click += new System.EventHandler(this.AddQuotesBtn_Click);
       // 
       // ViewQuotesBtn
       // 
@@ -57,7 +58,7 @@
       this.ViewQuotesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
       this.ViewQuotesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ViewQuotesBtn.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.ViewQuotesBtn.Location = new System.Drawing.Point(24, 93);
+      this.ViewQuotesBtn.Location = new System.Drawing.Point(24, 88);
       this.ViewQuotesBtn.Margin = new System.Windows.Forms.Padding(6);
       this.ViewQuotesBtn.Name = "ViewQuotesBtn";
       this.ViewQuotesBtn.Size = new System.Drawing.Size(200, 50);
@@ -71,7 +72,7 @@
       this.SearchQuotesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
       this.SearchQuotesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.SearchQuotesBtn.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.SearchQuotesBtn.Location = new System.Drawing.Point(24, 155);
+      this.SearchQuotesBtn.Location = new System.Drawing.Point(24, 150);
       this.SearchQuotesBtn.Margin = new System.Windows.Forms.Padding(6);
       this.SearchQuotesBtn.Name = "SearchQuotesBtn";
       this.SearchQuotesBtn.Size = new System.Drawing.Size(200, 50);
@@ -85,18 +86,19 @@
       this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
       this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ExitBtn.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.ExitBtn.Location = new System.Drawing.Point(24, 217);
+      this.ExitBtn.Location = new System.Drawing.Point(24, 212);
       this.ExitBtn.Margin = new System.Windows.Forms.Padding(6);
       this.ExitBtn.Name = "ExitBtn";
       this.ExitBtn.Size = new System.Drawing.Size(200, 50);
       this.ExitBtn.TabIndex = 3;
       this.ExitBtn.Text = "E&xit";
       this.ExitBtn.UseVisualStyleBackColor = true;
+      this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
       // 
       // pictureBox1
       // 
       this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(242, 155);
+      this.pictureBox1.Location = new System.Drawing.Point(242, 150);
       this.pictureBox1.Name = "pictureBox1";
       this.pictureBox1.Size = new System.Drawing.Size(130, 112);
       this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
