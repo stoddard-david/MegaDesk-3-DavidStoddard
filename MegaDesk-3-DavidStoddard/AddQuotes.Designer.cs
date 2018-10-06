@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddQuotes));
       this.AddQuotesBtn = new System.Windows.Forms.Button();
       this.cancelBtn = new System.Windows.Forms.Button();
@@ -46,9 +47,11 @@
       this.widthDetails = new System.Windows.Forms.Label();
       this.depthDetails = new System.Windows.Forms.Label();
       this.drawerDetials = new System.Windows.Forms.Label();
+      this.widthErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.numberDrawersVal)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.depthVal)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.widthVal)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.widthErrorProvider)).BeginInit();
       this.SuspendLayout();
       // 
       // AddQuotesBtn
@@ -223,13 +226,8 @@
       this.widthVal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.widthVal.Location = new System.Drawing.Point(119, 103);
       this.widthVal.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-      this.widthVal.Maximum = new decimal(new int[] {
-            96,
-            0,
-            0,
-            0});
       this.widthVal.Minimum = new decimal(new int[] {
-            24,
+            20,
             0,
             0,
             0});
@@ -242,6 +240,8 @@
             0,
             0});
       this.widthVal.Enter += new System.EventHandler(this.value_Enter);
+      this.widthVal.Validating += new System.ComponentModel.CancelEventHandler(this.widthVal_Validating);
+      this.widthVal.Validated += new System.EventHandler(this.widthVal_Validated);
       // 
       // widthDetails
       // 
@@ -272,6 +272,10 @@
       this.drawerDetials.Size = new System.Drawing.Size(219, 22);
       this.drawerDetials.TabIndex = 17;
       this.drawerDetials.Text = "*Min 0 drawers   Max 7 drawers";
+      // 
+      // widthErrorProvider
+      // 
+      this.widthErrorProvider.ContainerControl = this;
       // 
       // AddQuotes
       // 
@@ -304,6 +308,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.numberDrawersVal)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.depthVal)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.widthVal)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.widthErrorProvider)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -328,5 +333,6 @@
     private System.Windows.Forms.Label widthDetails;
     private System.Windows.Forms.Label depthDetails;
     private System.Windows.Forms.Label drawerDetials;
+    private System.Windows.Forms.ErrorProvider widthErrorProvider;
   }
 }
