@@ -28,12 +28,41 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.components = new System.ComponentModel.Container();
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchQuotes));
+      this.cancelBtn = new System.Windows.Forms.Button();
+      this.SuspendLayout();
+      // 
+      // cancelBtn
+      // 
+      this.cancelBtn.FlatAppearance.BorderSize = 2;
+      this.cancelBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
+      this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.cancelBtn.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.cancelBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
+      this.cancelBtn.Location = new System.Drawing.Point(248, 193);
+      this.cancelBtn.Margin = new System.Windows.Forms.Padding(6);
+      this.cancelBtn.Name = "cancelBtn";
+      this.cancelBtn.Size = new System.Drawing.Size(157, 50);
+      this.cancelBtn.TabIndex = 10;
+      this.cancelBtn.Text = "&Cancel";
+      this.cancelBtn.UseVisualStyleBackColor = true;
+      this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+      // 
+      // SearchQuotes
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(800, 450);
-      this.Text = "SearchQuotes";
+      this.ClientSize = new System.Drawing.Size(420, 258);
+      this.Controls.Add(this.cancelBtn);
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+      this.Name = "SearchQuotes";
+      this.Text = "Search Quotes";
+      this.ResumeLayout(false);
+
     }
 
     #endregion
+
+    private System.Windows.Forms.Button cancelBtn;
   }
 }

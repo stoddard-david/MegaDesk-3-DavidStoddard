@@ -28,5 +28,19 @@ namespace MegaDesk_3_DavidStoddard
     {
       Close();
     }
+
+    private void ViewQuotesBtn_Click(object sender, EventArgs e)
+    {
+      DisplayQuotes DisplayQuotesForm = new DisplayQuotes { Tag = this };
+      DisplayQuotesForm.Show(this);
+      Hide();
+    }
+
+    private void SearchQuotesBtn_Click(object sender, EventArgs e)
+    {
+      SearchQuotes SearchQuotesForm = new SearchQuotes { Tag = this };
+      SearchQuotesForm.Show(this);
+      Hide();
+    }
   }
 }

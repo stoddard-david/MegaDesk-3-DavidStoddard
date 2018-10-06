@@ -16,5 +16,12 @@ namespace MegaDesk_3_DavidStoddard
     {
       InitializeComponent();
     }
+
+    private void cancelBtn_Click(object sender, EventArgs e)
+    {
+      var MainMenu = (MainMenu)Tag;
+      MainMenu.Show();
+      Close();
+    }
   }
 }
