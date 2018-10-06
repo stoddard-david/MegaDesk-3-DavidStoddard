@@ -48,6 +48,8 @@
       this.depthDetails = new System.Windows.Forms.Label();
       this.drawerDetials = new System.Windows.Forms.Label();
       this.widthErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+      this.textBox2 = new System.Windows.Forms.TextBox();
+      this.label2 = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.numberDrawersVal)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.depthVal)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.widthVal)).BeginInit();
@@ -220,6 +222,7 @@
             0,
             0});
       this.depthVal.Enter += new System.EventHandler(this.value_Enter);
+      this.depthVal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depthVal_KeyPress);
       // 
       // widthVal
       // 
@@ -277,11 +280,31 @@
       // 
       this.widthErrorProvider.ContainerControl = this;
       // 
+      // textBox2
+      // 
+      this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.textBox2.Location = new System.Drawing.Point(237, 316);
+      this.textBox2.Name = "textBox2";
+      this.textBox2.Size = new System.Drawing.Size(148, 26);
+      this.textBox2.TabIndex = 18;
+      this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depthVal_KeyPress);
+      // 
+      // label2
+      // 
+      this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label2.Location = new System.Drawing.Point(237, 288);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(122, 25);
+      this.label2.TabIndex = 19;
+      this.label2.Text = "Depth Test:";
+      // 
       // AddQuotes
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(409, 442);
+      this.Controls.Add(this.label2);
+      this.Controls.Add(this.textBox2);
       this.Controls.Add(this.drawerDetials);
       this.Controls.Add(this.depthDetails);
       this.Controls.Add(this.widthDetails);
@@ -334,5 +357,7 @@
     private System.Windows.Forms.Label depthDetails;
     private System.Windows.Forms.Label drawerDetials;
     private System.Windows.Forms.ErrorProvider widthErrorProvider;
+    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.TextBox textBox2;
   }
 }
