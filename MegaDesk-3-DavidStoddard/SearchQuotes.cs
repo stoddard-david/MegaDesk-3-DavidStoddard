@@ -12,6 +12,8 @@ namespace MegaDesk_3_DavidStoddard
 {
   public partial class SearchQuotes : Form
   {
+    private bool CancelPress = false;
+
     public SearchQuotes()
     {
       InitializeComponent();
@@ -21,7 +23,16 @@ namespace MegaDesk_3_DavidStoddard
     {
       var MainMenu = (MainMenu)Tag;
       MainMenu.Show();
+      CancelPress = true;
       Close();
+    }
+
+    private void SubFormClosing(object sender, FormClosedEventArgs e)
+    {
+      if (e.CloseReason == CloseReason.UserClosing && !CancelPress)
+      {
+        Environment.Exit(1);
+      }
     }
   }
 }

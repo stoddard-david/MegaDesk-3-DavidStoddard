@@ -55,8 +55,11 @@
       this.ClientSize = new System.Drawing.Size(420, 258);
       this.Controls.Add(this.cancelBtn);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+      this.MaximizeBox = false;
+      this.MinimizeBox = false;
       this.Name = "SearchQuotes";
       this.Text = "Search Quotes";
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SubFormClosing);
       this.ResumeLayout(false);
 
     }

@@ -12,9 +12,27 @@ namespace MegaDesk_3_DavidStoddard
 {
   public partial class ViewAllQuotes : Form
   {
+    private bool CancelPress = false;
+
     public ViewAllQuotes()
     {
       InitializeComponent();
+    }
+
+    private void cancelBtn_Click(object sender, EventArgs e)
+    {
+      var MainMenu = (MainMenu)Tag;
+      MainMenu.Show();
+      CancelPress = true;
+      Close();
+    }
+
+    private void SubFormClosing(object sender, FormClosedEventArgs e)
+    {
+      if (e.CloseReason == CloseReason.UserClosing && !CancelPress)
+      {
+        Environment.Exit(1);
+      }
     }
   }
 }

@@ -184,6 +184,7 @@
       this.numberDrawersVal.Name = "numberDrawersVal";
       this.numberDrawersVal.Size = new System.Drawing.Size(53, 27);
       this.numberDrawersVal.TabIndex = 5;
+      this.numberDrawersVal.Enter += new System.EventHandler(this.value_Enter);
       // 
       // textBox1
       // 
@@ -210,12 +211,12 @@
       this.depthVal.Name = "depthVal";
       this.depthVal.Size = new System.Drawing.Size(53, 27);
       this.depthVal.TabIndex = 4;
-      this.depthVal.TabStop = false;
       this.depthVal.Value = new decimal(new int[] {
             12,
             0,
             0,
             0});
+      this.depthVal.Enter += new System.EventHandler(this.value_Enter);
       // 
       // widthVal
       // 
@@ -240,6 +241,7 @@
             0,
             0,
             0});
+      this.widthVal.Enter += new System.EventHandler(this.value_Enter);
       // 
       // widthDetails
       // 
@@ -294,8 +296,11 @@
       this.Controls.Add(this.cancelBtn);
       this.Controls.Add(this.AddQuotesBtn);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+      this.MaximizeBox = false;
+      this.MinimizeBox = false;
       this.Name = "AddQuotes";
       this.Text = "Add New Quotes";
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SubFormClosing);
       ((System.ComponentModel.ISupportInitialize)(this.numberDrawersVal)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.depthVal)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.widthVal)).EndInit();

@@ -31,8 +31,8 @@ namespace MegaDesk_3_DavidStoddard
 
     private void ViewQuotesBtn_Click(object sender, EventArgs e)
     {
-      DisplayQuotes DisplayQuotesForm = new DisplayQuotes { Tag = this };
-      DisplayQuotesForm.Show(this);
+      ViewAllQuotes ViewQuotesForm = new ViewAllQuotes { Tag = this };
+      ViewQuotesForm.Show(this);
       Hide();
     }
 

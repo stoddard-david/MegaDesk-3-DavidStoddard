@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace MegaDesk_3_DavidStoddard
 {
-  public partial class DisplayQuotes : Form
+  public partial class DisplayQuote : Form
   {
-    public DisplayQuotes()
+    private bool CancelPress = false;
+
+    public DisplayQuote()
     {
       InitializeComponent();
     }
@@ -21,7 +23,16 @@ namespace MegaDesk_3_DavidStoddard
     {
       var MainMenu = (MainMenu)Tag;
       MainMenu.Show();
+      CancelPress = true;
       Close();
+    }
+
+    private void SubFormClosing(object sender, FormClosedEventArgs e)
+    {
+      if (e.CloseReason == CloseReason.UserClosing && !CancelPress)
+      {
+        Environment.Exit(1);
+      }
     }
   }
 }
