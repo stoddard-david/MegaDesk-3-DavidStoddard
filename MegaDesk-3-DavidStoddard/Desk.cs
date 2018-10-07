@@ -8,5 +8,18 @@ namespace MegaDesk_3_DavidStoddard
 {
   class Desk
   {
+    private int Width { get; set; }
+    private int Depth { get; set; }
+    private int Drawers { get; set; }
+    private int Area { get; }
+    private enum surfaceMaterial
+    {
+      Oak,
+      Laminate,
+      Pine,
+      Rosewood,
+      Veneer
+    }
+
   }
 }
